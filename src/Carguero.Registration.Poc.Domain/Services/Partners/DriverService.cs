@@ -29,9 +29,17 @@ namespace Carguero.Registration.Poc.Domain.Services.Partners
             await _driverRepository.SaveAsync();
         }
 
-        public async Task<IEnumerable<DriverResponse>> GetAll()
+        public async Task<DriverResponse> GetDriverActiveByCpf(string cpf)
         {
-            var driver = await _driverRepository.GetByPredicateAsync(s => s.Id == 82);
+            var driver = await _driverRepository.FindByKeyAsync(cpf);
+
+            return _mapper.Map<Driver, DriverResponse>(driver);
+        }
+
+        public async Task<IEnumerable<DriverResponse>> GetDriverActiveByTenant(string cpf, int tenantId)
+        {
+            var driver = await _driverRepository
+                .GetByPredicateAsync(p => p.Cpf == cpf && p.Tenant.Any(s=> s.Id == tenantId), p => p.Tenant, p => p.Contacts, p => p.Address , p=> p.Vehicles);
 
             return _mapper.Map<IEnumerable<Driver>, IEnumerable<DriverResponse>>(driver);
         }

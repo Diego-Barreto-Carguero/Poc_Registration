@@ -26,10 +26,11 @@ namespace Carguero.Registration.Poc.Domain.Entities.Partners
         public Address Address { get; set; }
         public IEnumerable<Contact> Contacts { get; set; }
         public IEnumerable<Vehicle> Vehicles { get; set; }
+        public virtual IEnumerable<Tenant> Tenant { get; set; }
 
         public void ValidateMinimumAgeDriver()
         {
-            if (BirthDate.Subtract(DateTime.Today).Days > 10)
+            if (BirthDate.Subtract(DateTime.Today).Days >= 10)
             {
                 throw new DomainException("Driver has no minimum age recommended");
             }

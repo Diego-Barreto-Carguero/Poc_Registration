@@ -60,5 +60,22 @@ namespace Carguero.Registration.Poc.Infrastructure.Data.Repositories.Base
         {
             await _registrationContext.SaveChangesAsync();
         }
+
+        public async Task<IEnumerable<TEntity>> GetByPredicateAsync(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity, object>>[] includes)
+        {
+            var query = _dbSet.Value.Where(predicate).AsQueryable();
+
+            if (includes != null)
+            {
+                foreach (var include in includes)
+                {
+                    query = query.Include(include);
+                }
+            }
+
+            var result = await query.ToListAsync();
+
+            return result;
+        }
     }
 }
