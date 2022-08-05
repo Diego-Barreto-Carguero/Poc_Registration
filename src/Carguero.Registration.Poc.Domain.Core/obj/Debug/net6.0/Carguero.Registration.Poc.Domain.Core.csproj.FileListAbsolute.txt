@@ -1,0 +1,12 @@
+C:\Users\diego.barreto\Documents\Projects\POCS\Carguero.Registration\src\Carguero.Registration.Poc.Domain.Core\bin\Debug\net6.0\Carguero.Registration.Poc.Domain.Core.deps.json
+C:\Users\diego.barreto\Documents\Projects\POCS\Carguero.Registration\src\Carguero.Registration.Poc.Domain.Core\bin\Debug\net6.0\Carguero.Registration.Poc.Domain.Core.dll
+C:\Users\diego.barreto\Documents\Projects\POCS\Carguero.Registration\src\Carguero.Registration.Poc.Domain.Core\bin\Debug\net6.0\Carguero.Registration.Poc.Domain.Core.pdb
+C:\Users\diego.barreto\Documents\Projects\POCS\Carguero.Registration\src\Carguero.Registration.Poc.Domain.Core\obj\Debug\net6.0\Carguero.Registration.Poc.Domain.Core.csproj.AssemblyReference.cache
+C:\Users\diego.barreto\Documents\Projects\POCS\Carguero.Registration\src\Carguero.Registration.Poc.Domain.Core\obj\Debug\net6.0\Carguero.Registration.Poc.Domain.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego.barreto\Documents\Projects\POCS\Carguero.Registration\src\Carguero.Registration.Poc.Domain.Core\obj\Debug\net6.0\Carguero.Registration.Poc.Domain.Core.AssemblyInfoInputs.cache
+C:\Users\diego.barreto\Documents\Projects\POCS\Carguero.Registration\src\Carguero.Registration.Poc.Domain.Core\obj\Debug\net6.0\Carguero.Registration.Poc.Domain.Core.AssemblyInfo.cs
+C:\Users\diego.barreto\Documents\Projects\POCS\Carguero.Registration\src\Carguero.Registration.Poc.Domain.Core\obj\Debug\net6.0\Carguero.Registration.Poc.Domain.Core.csproj.CoreCompileInputs.cache
+C:\Users\diego.barreto\Documents\Projects\POCS\Carguero.Registration\src\Carguero.Registration.Poc.Domain.Core\obj\Debug\net6.0\Carguero.Registration.Poc.Domain.Core.dll
+C:\Users\diego.barreto\Documents\Projects\POCS\Carguero.Registration\src\Carguero.Registration.Poc.Domain.Core\obj\Debug\net6.0\refint\Carguero.Registration.Poc.Domain.Core.dll
+C:\Users\diego.barreto\Documents\Projects\POCS\Carguero.Registration\src\Carguero.Registration.Poc.Domain.Core\obj\Debug\net6.0\Carguero.Registration.Poc.Domain.Core.pdb
+C:\Users\diego.barreto\Documents\Projects\POCS\Carguero.Registration\src\Carguero.Registration.Poc.Domain.Core\obj\Debug\net6.0\ref\Carguero.Registration.Poc.Domain.Core.dll

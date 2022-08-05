@@ -1,0 +1,14 @@
+﻿.topbar {
+    background-color: #6ba539 !important;
+}
+
+.topbar-wrapper a img {
+    content: url('/Contents/Images/logo.png');
+}
+
+.swagger-ui .scheme-container {
+    margin: 0;
+    padding: 0;
+    background: inherit;
+    box-shadow: none;
+}

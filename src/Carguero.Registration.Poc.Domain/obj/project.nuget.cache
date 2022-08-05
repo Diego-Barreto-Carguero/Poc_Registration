@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "ijD0oj4CU2c8RdvVQrx97XgaKFK/bIUXiKFVmMLlfRsPyHAbHYUowCZdgQjxIyFhdHzH6xhh4NdlYxp5JF4A7w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Domain\\Carguero.Registration.Poc.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\diego.barreto\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\diego.barreto\\.nuget\\packages\\fluentvalidation\\11.1.0\\fluentvalidation.11.1.0.nupkg.sha512",
+    "C:\\Users\\diego.barreto\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\diego.barreto\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
+    "C:\\Users\\diego.barreto\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\diego.barreto\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

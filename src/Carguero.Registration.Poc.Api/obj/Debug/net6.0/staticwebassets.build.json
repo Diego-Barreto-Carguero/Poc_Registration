@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "m3EG+amTDtk+TaUm8aiS/p85jrgNszgi1NMK4jtP6LA=",
+  "Source": "Carguero.Registration.Poc.Api",
+  "BasePath": "_content/Carguero.Registration.Poc.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

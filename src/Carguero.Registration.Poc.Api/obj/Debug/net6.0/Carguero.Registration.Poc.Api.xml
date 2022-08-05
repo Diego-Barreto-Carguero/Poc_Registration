@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Carguero.Registration.Poc.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Carguero.Registration.Poc.Api.Controllers.V1.DriverController">
+            <summary>
+            Service responsible for all registration flows
+            </summary>
+        </member>
+    </members>
+</doc>
