@@ -4,19 +4,40 @@ using Carguero.Registration.Poc.Domain.Core.DomainObjects;
 using Carguero.Registration.Poc.Domain.Utils.Extensions;
 using Carguero.Registration.Poc.Infrastructure.Data.Contexts;
 using Carguero.Registration.Poc.Infrastructure.Data.Extensions;
+using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
+using Newtonsoft.Json;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add(typeof(ValidateModelStateConfiguration));
+})
+    .AddFluentValidation(sg =>
+    {
+        sg.RegisterValidatorsFromAssembly(Assembly.Load("Carguero.Registration.Poc.Domain"));
+    })
+    .AddNewtonsoftJson(o =>
+    {
+        o.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
+    });
+
+builder.Services.Configure<ApiBehaviorOptions>(options =>
+{
+    options.SuppressModelStateInvalidFilter = true;
+});
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddRepository();
 builder.Services.AddService();
 builder.Services.AddSwagger();
+builder.Services.AddConfigureHealthCheck();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
 builder.Services.AddScoped<INotifier, Notifier>();
 
 var connectionString = builder.Configuration.GetConnectionString("API");
@@ -35,10 +56,10 @@ app.UseStaticFiles(new StaticFileOptions()
     RequestPath = "/Contents"
 });
 
+app.ConfigureHealthCheck();
 app.UseHttpsRedirection();
 app.UseSwaggerPage();
 app.UseReDocPage();
 app.UseAuthorization();
 app.MapControllers();
-
 app.Run();

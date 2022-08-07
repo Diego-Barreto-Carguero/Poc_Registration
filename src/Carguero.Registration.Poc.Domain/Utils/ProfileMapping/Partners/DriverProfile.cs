@@ -9,7 +9,7 @@ namespace Carguero.Registration.Poc.Domain.Utils.Profiles.Partners
         public DriverProfile()
         {
             CreateMap<Driver, DriverResponse>();
-            CreateMap<DriverRequest, Driver>();
+            CreateMap<DriverRequest, Driver>().ConstructUsing(s => new Driver(s.Name, s.Cpf, s.Rg, s.BirthDate));
         }
     }
 }

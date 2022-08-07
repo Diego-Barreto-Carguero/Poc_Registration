@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Api\\Carguero.Registration.Poc.Api.csproj": {}
+    "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Api\\Carguero.Registration.Poc.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Api\\Carguero.Registration.Poc.Api.csproj": {
+    "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Api\\Carguero.Registration.Poc.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Api\\Carguero.Registration.Poc.Api.csproj",
+        "projectUniqueName": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Api\\Carguero.Registration.Poc.Api.csproj",
         "projectName": "Carguero.Registration.Poc.Api",
-        "projectPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Api\\Carguero.Registration.Poc.Api.csproj",
+        "projectPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Api\\Carguero.Registration.Poc.Api.csproj",
         "packagesPath": "C:\\Users\\diego.barreto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Api\\obj\\",
+        "outputPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -31,8 +31,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Infrastructure.Data\\Carguero.Registration.Poc.Infrastructure.Data.csproj": {
-                "projectPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Infrastructure.Data\\Carguero.Registration.Poc.Infrastructure.Data.csproj"
+              "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Infrastructure.Data\\Carguero.Registration.Poc.Infrastructure.Data.csproj": {
+                "projectPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Infrastructure.Data\\Carguero.Registration.Poc.Infrastructure.Data.csproj"
               }
             }
           }
@@ -67,6 +67,14 @@
               "target": "Package",
               "version": "[11.0.0, )"
             },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.1.2, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
             "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": {
               "target": "Package",
               "version": "[5.0.0, )"
@@ -80,6 +88,10 @@
             "Microsoft.EntityFrameworkCore.Proxies": {
               "target": "Package",
               "version": "[6.0.7, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -116,14 +128,14 @@
         }
       }
     },
-    "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Domain.Core\\Carguero.Registration.Poc.Domain.Core.csproj": {
+    "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Domain.Core\\Carguero.Registration.Poc.Domain.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Domain.Core\\Carguero.Registration.Poc.Domain.Core.csproj",
+        "projectUniqueName": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Domain.Core\\Carguero.Registration.Poc.Domain.Core.csproj",
         "projectName": "Carguero.Registration.Poc.Domain.Core",
-        "projectPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Domain.Core\\Carguero.Registration.Poc.Domain.Core.csproj",
+        "projectPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Domain.Core\\Carguero.Registration.Poc.Domain.Core.csproj",
         "packagesPath": "C:\\Users\\diego.barreto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Domain.Core\\obj\\",
+        "outputPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Domain.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -173,14 +185,14 @@
         }
       }
     },
-    "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Domain\\Carguero.Registration.Poc.Domain.csproj": {
+    "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Domain\\Carguero.Registration.Poc.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Domain\\Carguero.Registration.Poc.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Domain\\Carguero.Registration.Poc.Domain.csproj",
         "projectName": "Carguero.Registration.Poc.Domain",
-        "projectPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Domain\\Carguero.Registration.Poc.Domain.csproj",
+        "projectPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Domain\\Carguero.Registration.Poc.Domain.csproj",
         "packagesPath": "C:\\Users\\diego.barreto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Domain\\obj\\",
+        "outputPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -200,8 +212,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Domain.Core\\Carguero.Registration.Poc.Domain.Core.csproj": {
-                "projectPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Domain.Core\\Carguero.Registration.Poc.Domain.Core.csproj"
+              "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Domain.Core\\Carguero.Registration.Poc.Domain.Core.csproj": {
+                "projectPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Domain.Core\\Carguero.Registration.Poc.Domain.Core.csproj"
               }
             }
           }
@@ -248,14 +260,14 @@
         }
       }
     },
-    "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Infrastructure.Data\\Carguero.Registration.Poc.Infrastructure.Data.csproj": {
+    "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Infrastructure.Data\\Carguero.Registration.Poc.Infrastructure.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Infrastructure.Data\\Carguero.Registration.Poc.Infrastructure.Data.csproj",
+        "projectUniqueName": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Infrastructure.Data\\Carguero.Registration.Poc.Infrastructure.Data.csproj",
         "projectName": "Carguero.Registration.Poc.Infrastructure.Data",
-        "projectPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Infrastructure.Data\\Carguero.Registration.Poc.Infrastructure.Data.csproj",
+        "projectPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Infrastructure.Data\\Carguero.Registration.Poc.Infrastructure.Data.csproj",
         "packagesPath": "C:\\Users\\diego.barreto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Infrastructure.Data\\obj\\",
+        "outputPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Infrastructure.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -275,8 +287,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Domain\\Carguero.Registration.Poc.Domain.csproj": {
-                "projectPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Domain\\Carguero.Registration.Poc.Domain.csproj"
+              "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Domain\\Carguero.Registration.Poc.Domain.csproj": {
+                "projectPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Domain\\Carguero.Registration.Poc.Domain.csproj"
               }
             }
           }

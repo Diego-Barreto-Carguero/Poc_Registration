@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Domain.Core\\Carguero.Registration.Poc.Domain.Core.csproj",
+      "projectUniqueName": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Domain.Core\\Carguero.Registration.Poc.Domain.Core.csproj",
       "projectName": "Carguero.Registration.Poc.Domain.Core",
-      "projectPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Domain.Core\\Carguero.Registration.Poc.Domain.Core.csproj",
+      "projectPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Domain.Core\\Carguero.Registration.Poc.Domain.Core.csproj",
       "packagesPath": "C:\\Users\\diego.barreto\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Domain.Core\\obj\\",
+      "outputPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Domain.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

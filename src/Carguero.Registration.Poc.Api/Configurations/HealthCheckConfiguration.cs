@@ -1,7 +1,6 @@
 ﻿using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 
-
 namespace Carguero.Registration.Poc.Api.Configurations
 {
     public static class HealthCheckConfiguration
@@ -12,9 +11,11 @@ namespace Carguero.Registration.Poc.Api.Configurations
 
             services.AddHealthChecksUI(options =>
             {
+                options.SetHeaderText("Health Checks Status");
                 options.SetEvaluationTimeInSeconds(5);
                 options.MaximumHistoryEntriesPerEndpoint(10);
                 options.AddHealthCheckEndpoint("Registrtion API Health Checks", "/health");
+           
             }).AddInMemoryStorage();
         }
 
@@ -31,7 +32,9 @@ namespace Carguero.Registration.Poc.Api.Configurations
             app.UseHealthChecksUI(options =>
             {
                 options.UIPath = "/dashboard";
-                options.AddCustomStylesheet("./custom.css");
+                options.AddCustomStylesheet("Contents/Styles/Health-Check-Custom.css");
+                options.PageTitle = "Health Check - Registration API";
+                options.AsideMenuOpened = false;
             });
         }
     }

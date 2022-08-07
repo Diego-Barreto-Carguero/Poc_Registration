@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NcIwAYUdMXxy8Bw3aZAgWecgezywVEnmEmHQ5AnwRecdCmMqo3ctrCxqHdFWhTY4kArxf5nHjvHpslMztzy2Fw==",
+  "dgSpecHash": "DD/pP0c1y0MuhmgY/BJFm3+T5FLFyUhRaO5AuRU0r5176dAHn7H/1MeCvx6RIfpb9lXg+If44fxSElVBW08OOg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Domain.Core\\Carguero.Registration.Poc.Domain.Core.csproj",
+  "projectFilePath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Domain.Core\\Carguero.Registration.Poc.Domain.Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

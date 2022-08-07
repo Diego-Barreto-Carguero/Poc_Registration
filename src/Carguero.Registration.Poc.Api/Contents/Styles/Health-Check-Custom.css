@@ -1,0 +1,23 @@
+﻿:root {
+    --bgMain: #ffffff;
+    --logoImageUrl: url('/Contents/Images/truck_logo.png');
+    --fcBase: #ffffff;
+    --bgMenuActive: #679e36;
+    --bgButton: #679e36;
+    --primaryColor: #54822a;
+    --bgTable: #6aa338;
+    --bgTableSecondary: #54822a;
+    --successColor: #ffffff;
+    --bgAside: #6aa338;
+}
+
+.hc-table__head {
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #9d9d9d;
+}
+
+span {
+    color: #dfdfdf;
+}

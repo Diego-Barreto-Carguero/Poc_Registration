@@ -9,10 +9,10 @@ namespace Carguero.Registration.Poc.Domain.Core.Contracts.Repositories
         Task<TEntity> AddAsync(TEntity entity);
         void Remove(TEntity entity);
         void Update(TEntity entity);
-        Task<TEntity?> FindByKeyAsync(params object[] values);
+        Task<TEntity?> FindByKeyAsync(Expression<Func<TEntity, bool>> predicate);
         Task<IEnumerable<TEntity>> GetByPredicateAsync(Expression<Func<TEntity, bool>> predicate);
         Task<IEnumerable<TEntity>> GetByPredicateAsync(Expression<Func<TEntity, bool>> predicate, int page, int pageSize);
         Task<IEnumerable<TEntity>> GetByPredicateAsync(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity, object>>[] includes);
-        Task SaveAsync();
+        Task CommitAsync();
     }
 }

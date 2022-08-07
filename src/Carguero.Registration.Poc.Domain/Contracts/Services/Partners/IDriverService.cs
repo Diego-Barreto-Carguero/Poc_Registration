@@ -9,5 +9,8 @@ namespace Carguero.Registration.Poc.Domain.Contracts.Services.Partners
         public Task<DriverResponse> GetDriverActiveByCpf(string cpf);
 
         public Task RegisterAsync(DriverRequest driverRequest);
+
+        public Task UpdateDriverActiveAsync(string cpf);
+
     }
 }

@@ -12,9 +12,16 @@ namespace Carguero.Registration.Poc.Domain.Core.DomainObjects
             _notification = new List<Notification>();
         }
 
-        public List<Notification> GetNotifications()
+        public dynamic GetNotifications()
         {
-            return _notification;
+            return new { errors = _notification.Select(s => s.Message).ToList() };
+        }
+
+        public dynamic GetNotifications(Exception exception)
+        {
+            NotifyHandle(exception.Message);
+
+            return new { errors = _notification.Select(s => s.Message).ToList() };
         }
 
         public void NotifyHandle(string notification)

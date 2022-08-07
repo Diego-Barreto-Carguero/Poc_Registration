@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7FnvZabfjUPs/mwO2Hm67uPDZhTanrb8u2T1vvm5Krm+1Dv22O2yXtSuAQwZ9WDx+eRgmQnaeY/W/TpRYN+FNQ==",
+  "dgSpecHash": "YvBTWEqaR+MrGNzHWtYRpq3Q8PfYR837ecCLWYilGeBUlBhdq/nTUn4HWW+N7PNJMcECmsDT7JDgVAiutI8Hjw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Infrastructure.Data\\Carguero.Registration.Poc.Infrastructure.Data.csproj",
+  "projectFilePath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Infrastructure.Data\\Carguero.Registration.Poc.Infrastructure.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\diego.barreto\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\diego.barreto\\.nuget\\packages\\fluentvalidation\\11.1.0\\fluentvalidation.11.1.0.nupkg.sha512",

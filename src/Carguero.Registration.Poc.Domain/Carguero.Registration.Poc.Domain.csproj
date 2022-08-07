@@ -16,4 +16,8 @@
     <ProjectReference Include="..\Carguero.Registration.Poc.Domain.Core\Carguero.Registration.Poc.Domain.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\V2\" />
+  </ItemGroup>
+
 </Project>

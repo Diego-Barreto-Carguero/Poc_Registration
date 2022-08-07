@@ -1966,11 +1966,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Infrastructure.Data\\Carguero.Registration.Poc.Infrastructure.Data.csproj",
+      "projectUniqueName": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Infrastructure.Data\\Carguero.Registration.Poc.Infrastructure.Data.csproj",
       "projectName": "Carguero.Registration.Poc.Infrastructure.Data",
-      "projectPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Infrastructure.Data\\Carguero.Registration.Poc.Infrastructure.Data.csproj",
+      "projectPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Infrastructure.Data\\Carguero.Registration.Poc.Infrastructure.Data.csproj",
       "packagesPath": "C:\\Users\\diego.barreto\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Infrastructure.Data\\obj\\",
+      "outputPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Infrastructure.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1990,8 +1990,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Domain\\Carguero.Registration.Poc.Domain.csproj": {
-              "projectPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Carguero.Registration\\src\\Carguero.Registration.Poc.Domain\\Carguero.Registration.Poc.Domain.csproj"
+            "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Domain\\Carguero.Registration.Poc.Domain.csproj": {
+              "projectPath": "C:\\Users\\diego.barreto\\Documents\\Projects\\POCS\\Poc_Registration\\src\\Carguero.Registration.Poc.Domain\\Carguero.Registration.Poc.Domain.csproj"
             }
           }
         }
