@@ -10,8 +10,11 @@ namespace Carguero.Registration.Poc.Api.Controllers.V1
     /// Service responsible for all registration flows
     /// </summary>
     [ApiController]
-    [ApiVersion("1.0")]
+    [ApiVersion("1.0"), ApiExplorerSettings(GroupName = "1.0")] //, IgnoreApi = true
+    [Produces("application/json")]
     [Route("api/v{version:apiVersion}/drivers")]
+    [SwaggerResponse(StatusCodes.Status401Unauthorized, "Unauthorized")]
+    [SwaggerResponse(StatusCodes.Status403Forbidden, "Forbidden")]
     public class DriverController : ControllerBase
     {
         private readonly IDriverService _driverService;
@@ -51,8 +54,8 @@ namespace Carguero.Registration.Poc.Api.Controllers.V1
         [HttpPost]
         [SwaggerResponse(StatusCodes.Status201Created, "Created")]
         [SwaggerResponse(StatusCodes.Status400BadRequest, "BadRequest")]
-        [SwaggerOperation(Summary = "Create an driver", Description = "Create a new driver from the requisition template")]
-        public async Task<IActionResult> CreateSample([FromBody] DriverRequest driverRequest)
+        [SwaggerOperation(Summary = "Create an Driver", Description = "Create a new Driver from the requisition template")]
+        public async Task<IActionResult> CreateDriver([FromBody] DriverRequest driverRequest)
         {
             try
             {
@@ -71,33 +74,31 @@ namespace Carguero.Registration.Poc.Api.Controllers.V1
             }
         }
 
-        [HttpPut]
+        [HttpPut("{cpf}")]
         [SwaggerResponse(StatusCodes.Status201Created, "Created")]
         [SwaggerResponse(StatusCodes.Status400BadRequest, "BadRequest")]
-        [SwaggerOperation(Summary = "Create an driver", Description = "Create a new driver from the requisition template")]
-        public async Task<IActionResult> UpdateSample([FromBody] DriverRequest driverRequest)
+        [SwaggerOperation(Summary = "Update an driver", Description = "Update a new driver from the requisition template")]
+        public async Task<IActionResult> UpdateDriver([FromRoute(Name = "cpf")] string cpf, [FromBody] DriverRequest driverRequest)
         {
-            await _driverService.RegisterAsync(driverRequest);
             return CreatedAtAction(null, null);
         }
 
         [HttpPatch("{cpf}/active")]
-        [SwaggerResponse(StatusCodes.Status201Created, "Created")]
+        [SwaggerResponse(StatusCodes.Status204NoContent, "NoContent")]
         [SwaggerResponse(StatusCodes.Status400BadRequest, "BadRequest")]
-        [SwaggerOperation(Summary = "Create an driver", Description = "Create a new driver from the requisition template")]
-        public async Task<IActionResult> UpdateSamplde([FromRoute] string cpf)
+        [SwaggerOperation(Summary = "Partial Update of an driver", Description = "Partial Update of an driver by it's cpf.")]
+        public async Task<IActionResult> ActiveDriver([FromRoute] string cpf)
         {
             await _driverService.UpdateDriverActiveAsync(cpf);
             return CreatedAtAction(null, null);
         }
 
-        [HttpDelete]
-        [SwaggerResponse(StatusCodes.Status201Created, "Created")]
+        [HttpDelete("{cpf}")]
+        [SwaggerResponse(StatusCodes.Status204NoContent, "NoContent")]
         [SwaggerResponse(StatusCodes.Status400BadRequest, "BadRequest")]
-        [SwaggerOperation(Summary = "Create an driver", Description = "Create a new driver from the requisition template")]
-        public async Task<IActionResult> DeleteSamplde([FromBody] DriverRequest driverRequest)
+        [SwaggerOperation(Summary = "Delete one driver", Description = "Delete one item of driver by it's cpf.")]
+        public async Task<IActionResult> DeleteDriver([FromRoute] string cpf)
         {
-            await _driverService.RegisterAsync(driverRequest);
             return CreatedAtAction(null, null);
         }
     }
