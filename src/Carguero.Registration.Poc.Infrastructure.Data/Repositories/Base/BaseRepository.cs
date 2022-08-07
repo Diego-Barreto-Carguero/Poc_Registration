@@ -20,14 +20,16 @@ namespace Carguero.Registration.Poc.Infrastructure.Data.Repositories.Base
 
         public virtual async Task<TEntity> AddAsync(TEntity entity)
         {
+            entity.CreationDate = DateTime.Now;
+
             var result = await _dbSet.Value.AddAsync(entity);
 
             return result.Entity;
         }
 
-        public virtual async Task<TEntity?> FindByKeyAsync(params object[] values)
+        public virtual async Task<TEntity?> FindByKeyAsync(Expression<Func<TEntity, bool>> predicate)
         {
-            var result = await _dbSet.Value.FindAsync(values);
+            var result = await _dbSet.Value.SingleOrDefaultAsync(predicate);
 
             return result;
         }
@@ -53,10 +55,12 @@ namespace Carguero.Registration.Poc.Infrastructure.Data.Repositories.Base
 
         public virtual void Update(TEntity entity)
         {
+            entity.ModificationDate = DateTime.Now;
+
             _registrationContext.Entry(entity).State = EntityState.Modified;
         }
 
-        public async Task SaveAsync()
+        public async Task CommitAsync()
         {
             await _registrationContext.SaveChangesAsync();
         }
