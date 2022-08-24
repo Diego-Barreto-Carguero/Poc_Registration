@@ -1,16 +1,21 @@
-﻿using Carguero.Registration.Poc.Domain.Core.Contracts.Repositories;
+﻿// <copyright file="BaseRepository.cs" company="Carguero">
+// Copyright (c) Carguero. All rights reserved.
+// </copyright>
+
+using System.Linq.Expressions;
+using Carguero.Registration.Poc.Domain.Core.Contracts.Repositories;
 using Carguero.Registration.Poc.Domain.Core.Entities;
 using Carguero.Registration.Poc.Infrastructure.Data.Contexts;
 using Microsoft.EntityFrameworkCore;
-using System.Linq.Expressions;
 
 namespace Carguero.Registration.Poc.Infrastructure.Data.Repositories.Base
 {
     internal abstract class BaseRepository<TEntity> : IBaseRepository<TEntity>
             where TEntity : BaseEntity
     {
-        private RegistrationContext _registrationContext { get; set; }
-        private Lazy<DbSet<TEntity>> _dbSet { get; set; }
+        private RegistrationContext _registrationContext;
+
+        private Lazy<DbSet<TEntity>> _dbSet;
 
         public BaseRepository(RegistrationContext registrationContext)
         {

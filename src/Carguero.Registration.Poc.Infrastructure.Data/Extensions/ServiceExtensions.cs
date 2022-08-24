@@ -1,4 +1,8 @@
-﻿using Carguero.Registration.Poc.Domain.Contracts.Repositories.Partners;
+﻿// <copyright file="ServiceExtensions.cs" company="Carguero">
+// Copyright (c) Carguero. All rights reserved.
+// </copyright>
+
+using Carguero.Registration.Poc.Domain.Patterns.Contracts.Repositories;
 using Carguero.Registration.Poc.Infrastructure.Data.Repositories.Partners;
 using Microsoft.Extensions.DependencyInjection;
 

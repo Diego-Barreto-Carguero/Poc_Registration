@@ -338,3 +338,4 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/src/Carguero.Registration.Poc.Domain/Partners/DriverService.cs

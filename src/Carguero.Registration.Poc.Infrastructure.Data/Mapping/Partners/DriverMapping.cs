@@ -1,4 +1,8 @@
-﻿using Carguero.Registration.Poc.Domain.Entities.Partners;
+﻿// <copyright file="DriverMapping.cs" company="Carguero">
+// Copyright (c) Carguero. All rights reserved.
+// </copyright>
+
+using Carguero.Registration.Poc.Domain.Patterns.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

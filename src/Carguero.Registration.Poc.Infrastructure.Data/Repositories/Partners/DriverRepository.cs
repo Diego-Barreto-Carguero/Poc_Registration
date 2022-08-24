@@ -1,5 +1,9 @@
-﻿using Carguero.Registration.Poc.Domain.Contracts.Repositories.Partners;
-using Carguero.Registration.Poc.Domain.Entities.Partners;
+﻿// <copyright file="DriverRepository.cs" company="Carguero">
+// Copyright (c) Carguero. All rights reserved.
+// </copyright>
+
+using Carguero.Registration.Poc.Domain.Patterns.Contracts.Repositories;
+using Carguero.Registration.Poc.Domain.Patterns.Entities;
 using Carguero.Registration.Poc.Infrastructure.Data.Contexts;
 using Carguero.Registration.Poc.Infrastructure.Data.Repositories.Base;
 

@@ -1,10 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿// <copyright file="SwaggerConfiguration.cs" company="Carguero">
+// Copyright (c) Carguero. All rights reserved.
+// </copyright>
+
+using System.Reflection;
+using MicroElements.Swashbuckle.FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Interfaces;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
-using System.Reflection;
 
 namespace Carguero.Registration.Poc.Api.Configurations
 {
@@ -31,6 +36,8 @@ namespace Carguero.Registration.Poc.Api.Configurations
             _provider = services.BuildServiceProvider().GetRequiredService<IApiVersionDescriptionProvider>();
             var configuration = services.BuildServiceProvider().GetRequiredService<IConfiguration>();
             var startupAssembly = typeof(Program).GetTypeInfo().Assembly;
+
+            services.AddFluentValidationRulesToSwagger();
 
             services.AddSwaggerGen(options =>
             {
@@ -95,6 +102,7 @@ namespace Carguero.Registration.Poc.Api.Configurations
                 options.SchemaFilter<EnumSchemaFilter>();
                 options.DocumentFilter<CustomSwaggerDocumentAttribute>();
                 options.IncludeXmlComments(xmlFilePath);
+              
                 options.EnableAnnotations();
             });
         }

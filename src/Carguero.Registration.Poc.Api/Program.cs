@@ -1,7 +1,12 @@
-﻿using Carguero.Registration.Poc.Api.Configurations;
+﻿// <copyright file="Program.cs" company="Carguero">
+// Copyright (c) Carguero. All rights reserved.
+// </copyright>
+
+using System.Reflection;
+using Carguero.Registration.Poc.Api.Configurations;
 using Carguero.Registration.Poc.Domain.Core.Contracts;
 using Carguero.Registration.Poc.Domain.Core.DomainObjects;
-using Carguero.Registration.Poc.Domain.Utils.Extensions;
+using Carguero.Registration.Poc.Domain.Patterns.Extensions;
 using Carguero.Registration.Poc.Infrastructure.Data.Contexts;
 using Carguero.Registration.Poc.Infrastructure.Data.Extensions;
 using FluentValidation.AspNetCore;
@@ -9,7 +14,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using Newtonsoft.Json;
-using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,7 +38,7 @@ builder.Services.Configure<ApiBehaviorOptions>(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddRepository();
-builder.Services.AddService();
+builder.Services.AddPatternService();
 builder.Services.AddSwagger();
 builder.Services.AddConfigureHealthCheck();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());

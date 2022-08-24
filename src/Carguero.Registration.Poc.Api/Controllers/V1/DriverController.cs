@@ -1,16 +1,21 @@
-﻿using Carguero.Registration.Poc.Domain.Contracts.Services.Partners;
+﻿// <copyright file="DriverController.cs" company="Carguero">
+// Copyright (c) Carguero. All rights reserved.
+// </copyright>
+
 using Carguero.Registration.Poc.Domain.Core.Contracts;
-using Carguero.Registration.Poc.Domain.Models.Partners;
+using Carguero.Registration.Poc.Domain.Patterns.Contracts.Services;
+using Carguero.Registration.Poc.Domain.Patterns.Models.V1;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
 namespace Carguero.Registration.Poc.Api.Controllers.V1
 {
     /// <summary>
-    /// Service responsible for all registration flows
+    /// Service responsible for all registration flows.
     /// </summary>
     [ApiController]
-    [ApiVersion("1.0"), ApiExplorerSettings(GroupName = "1.0")] //, IgnoreApi = true
+    [ApiVersion("1.0")]
+    [ApiExplorerSettings(GroupName = "1.0")]
     [Produces("application/json")]
     [Route("api/v{version:apiVersion}/drivers")]
     [SwaggerResponse(StatusCodes.Status401Unauthorized, "Unauthorized")]
@@ -34,12 +39,10 @@ namespace Carguero.Registration.Poc.Api.Controllers.V1
         {
             var result = await _driverService.GetDriverActiveByCpf(cpf);
 
-            if (result is null)
-                return NotFound();
+            if (result is null) return NotFound();
 
             return Ok(result);
         }
-
 
         [HttpGet("{cpf}/tenants")]
         [SwaggerResponse(StatusCodes.Status200OK, "Ok")]

@@ -15,6 +15,5 @@ namespace Carguero.Registration.Poc.Domain.Core.Entities
         public DateTime CreationDate { get; set; }
 
         public DateTime ModificationDate { get; set; }
-
     }
 }
