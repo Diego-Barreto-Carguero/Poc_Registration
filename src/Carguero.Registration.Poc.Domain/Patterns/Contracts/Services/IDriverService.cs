@@ -2,17 +2,17 @@
 // Copyright (c) Carguero. All rights reserved.
 // </copyright>
 
-using Carguero.Registration.Poc.Domain.Patterns.Models.V1;
+using Carguero.Registration.Poc.Domain.Patterns.Entities;
 
 namespace Carguero.Registration.Poc.Domain.Patterns.Contracts.Services
 {
     public interface IDriverService
     {
-        public Task<IEnumerable<DriverResponse>> GetDriverActiveByTenant(string cpf, int tenantId);
+        public Task<IEnumerable<Driver>> GetDriverActiveByTenant(string cpf, int tenantId);
 
-        public Task<DriverResponse> GetDriverActiveByCpf(string cpf);
+        public Task<Driver> GetDriverActiveByCpf(string cpf);
 
-        public Task RegisterAsync(DriverRequest driverRequest);
+        public Task RegisterAsync(Driver driver);
 
         public Task UpdateDriverActiveAsync(string cpf);
     }

@@ -3,10 +3,10 @@
 // </copyright>
 
 using AutoMapper;
+using Carguero.Registration.Poc.Api.Patterns.Models.V1;
 using Carguero.Registration.Poc.Domain.Patterns.Entities;
-using Carguero.Registration.Poc.Domain.Patterns.Models.V1;
 
-namespace Carguero.Registration.Poc.Domain.Patterns.AutoMapper
+namespace Carguero.Registration.Poc.Api.Patterns.Profiles
 {
     internal class DriverProfile : Profile
     {

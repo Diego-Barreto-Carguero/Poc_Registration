@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// <copyright file="BaseEntity.cs" company="Carguero">
+// Copyright (c) Carguero. All rights reserved.
+// </copyright>
 
 namespace Carguero.Registration.Poc.Domain.Core.Entities
 {

@@ -2,65 +2,54 @@
 // Copyright (c) Carguero. All rights reserved.
 // </copyright>
 
-using AutoMapper;
 using Carguero.Registration.Poc.Domain.Core.Contracts;
 using Carguero.Registration.Poc.Domain.Patterns.AssertionConcern;
 using Carguero.Registration.Poc.Domain.Patterns.Contracts.Repositories;
 using Carguero.Registration.Poc.Domain.Patterns.Contracts.Services;
 using Carguero.Registration.Poc.Domain.Patterns.Entities;
-using Carguero.Registration.Poc.Domain.Patterns.Models.V1;
 
 namespace Carguero.Registration.Poc.Domain.Services
 {
-    internal class DriverService : IDriverService
+    internal sealed class DriverService : IDriverService
     {
         private readonly IDriverRepository _driverRepository;
-        private readonly IMapper _mapper;
         private readonly INotifier _notifier;
 
-        public DriverService(IDriverRepository driverRepository, IMapper mapper, INotifier notifier)
+        public DriverService(IDriverRepository driverRepository, INotifier notifier)
         {
             _driverRepository = driverRepository;
-            _mapper = mapper;
             _notifier = notifier;
         }
 
-        public async Task RegisterAsync(DriverRequest driverRequest)
+        public async Task RegisterAsync(Driver driver)
         {
-            var driver = await _driverRepository.FindByKeyAsync(s => s.Cpf == driverRequest.Cpf);
+            driver = await _driverRepository.FindByKeyAsync(s => s.Cpf == driver.Cpf);
 
-            if (driver.ValidateDriverExists(_notifier)) return;
-
-            driver = _mapper.Map<Driver>(driverRequest);
+            if (driver.AssertDriverIsNotNull(_notifier)) return;
 
             await _driverRepository.AddAsync(driver);
             await _driverRepository.CommitAsync();
         }
 
-        public async Task<DriverResponse> GetDriverActiveByCpf(string cpf)
+        public async Task<Driver> GetDriverActiveByCpf(string cpf)
         {
             var driver = await _driverRepository.FindByKeyAsync(s => s.Cpf == cpf);
 
-            return _mapper.Map<DriverResponse>(driver);
+            return driver;
         }
 
-        public async Task<IEnumerable<DriverResponse>> GetDriverActiveByTenant(string cpf, int tenantId)
+        public async Task<IEnumerable<Driver>> GetDriverActiveByTenant(string cpf, int tenantId)
         {
-            var driver = await _driverRepository
-                .GetByPredicateAsync(p => p.Cpf == cpf);
+            var drivers = await _driverRepository.GetByPredicateAsync(p => p.Cpf == cpf);
 
-            return _mapper.Map<IEnumerable<DriverResponse>>(driver);
+            return drivers;
         }
 
         public async Task UpdateDriverActiveAsync(string cpf)
         {
             var driver = await _driverRepository.FindByKeyAsync(s => s.Cpf == cpf);
 
-            if (driver is null)
-            {
-                _notifier.NotifyHandle($"Cpf {cpf} not found");
-                return;
-            }
+            driver.AssertDriverNull(_notifier);
 
             _driverRepository.Update(driver);
             await _driverRepository.CommitAsync();

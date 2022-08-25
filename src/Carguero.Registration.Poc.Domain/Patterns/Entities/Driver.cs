@@ -26,10 +26,5 @@ namespace Carguero.Registration.Poc.Domain.Patterns.Entities
         public string Rg { get; private set; }
 
         public DateTime BirthDate { get; private set; }
-
-        //public Address Address { get; set; }
-        //public IEnumerable<Contact> Contacts { get; set; }
-        //public IEnumerable<Vehicle> Vehicles { get; set; }
-        //public virtual IEnumerable<Tenant> Tenant { get; set; }
     }
 }

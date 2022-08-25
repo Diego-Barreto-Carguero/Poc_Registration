@@ -3,12 +3,14 @@
 // </copyright>
 
 using System.Reflection;
+using Carguero.Registration.Poc.Api.Patterns.OpenApiSamples.V1;
 using MicroElements.Swashbuckle.FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Interfaces;
 using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.Filters;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace Carguero.Registration.Poc.Api.Configurations
@@ -102,9 +104,11 @@ namespace Carguero.Registration.Poc.Api.Configurations
                 options.SchemaFilter<EnumSchemaFilter>();
                 options.DocumentFilter<CustomSwaggerDocumentAttribute>();
                 options.IncludeXmlComments(xmlFilePath);
-              
+                options.ExampleFilters();
                 options.EnableAnnotations();
             });
+
+            services.AddSwaggerExamplesFromAssemblies(Assembly.GetEntryAssembly());
         }
 
         public static void UseSwaggerPage(this IApplicationBuilder app)

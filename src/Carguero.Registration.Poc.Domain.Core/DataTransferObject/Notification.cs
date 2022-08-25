@@ -1,4 +1,8 @@
-﻿namespace Carguero.Registration.Poc.Domain.Core.DataTransferObject
+﻿// <copyright file="Notification.cs" company="Carguero">
+// Copyright (c) Carguero. All rights reserved.
+// </copyright>
+
+namespace Carguero.Registration.Poc.Domain.Core.DataTransferObject
 {
     public struct Notification
     {

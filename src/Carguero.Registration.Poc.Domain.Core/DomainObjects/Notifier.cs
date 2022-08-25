@@ -1,4 +1,8 @@
-﻿using Carguero.Registration.Poc.Domain.Core.Contracts;
+﻿// <copyright file="Notifier.cs" company="Carguero">
+// Copyright (c) Carguero. All rights reserved.
+// </copyright>
+
+using Carguero.Registration.Poc.Domain.Core.Contracts;
 using Carguero.Registration.Poc.Domain.Core.DataTransferObject;
 
 namespace Carguero.Registration.Poc.Domain.Core.DomainObjects

@@ -23,7 +23,7 @@ builder.Services.AddControllers(options =>
 })
     .AddFluentValidation(sg =>
     {
-        sg.RegisterValidatorsFromAssembly(Assembly.Load("Carguero.Registration.Poc.Domain"));
+        sg.RegisterValidatorsFromAssembly(Assembly.Load("Carguero.Registration.Poc.Api"));
     })
     .AddNewtonsoftJson(o =>
     {

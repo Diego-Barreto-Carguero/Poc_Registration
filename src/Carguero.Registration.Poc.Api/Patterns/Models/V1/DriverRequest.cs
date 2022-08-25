@@ -2,7 +2,7 @@
 // Copyright (c) Carguero. All rights reserved.
 // </copyright>
 
-namespace Carguero.Registration.Poc.Domain.Patterns.Models.V1
+namespace Carguero.Registration.Poc.Api.Patterns.Models.V1
 {
     public record DriverRequest
     {

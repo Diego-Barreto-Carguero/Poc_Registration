@@ -1,4 +1,4 @@
-﻿// <copyright file="DriverMapping.cs" company="Carguero">
+﻿// <copyright file="DriverConfiguration.cs" company="Carguero">
 // Copyright (c) Carguero. All rights reserved.
 // </copyright>
 
@@ -6,9 +6,9 @@ using Carguero.Registration.Poc.Domain.Patterns.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Carguero.Registration.Poc.Infrastructure.Data.Mapping.Partners
+namespace Carguero.Registration.Poc.Infrastructure.Data.Configuration.Partners
 {
-    internal class DriverMapping : IEntityTypeConfiguration<Driver>
+    internal class DriverConfiguration : IEntityTypeConfiguration<Driver>
     {
         public void Configure(EntityTypeBuilder<Driver> builder)
         {

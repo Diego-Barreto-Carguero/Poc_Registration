@@ -2,9 +2,11 @@
 // Copyright (c) Carguero. All rights reserved.
 // </copyright>
 
+using AutoMapper;
+using Carguero.Registration.Poc.Api.Patterns.Models.V1;
 using Carguero.Registration.Poc.Domain.Core.Contracts;
 using Carguero.Registration.Poc.Domain.Patterns.Contracts.Services;
-using Carguero.Registration.Poc.Domain.Patterns.Models.V1;
+using Carguero.Registration.Poc.Domain.Patterns.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
@@ -24,15 +26,17 @@ namespace Carguero.Registration.Poc.Api.Controllers.V1
     {
         private readonly IDriverService _driverService;
         private readonly INotifier _notifier;
+        private readonly IMapper _mapper;
 
-        public DriverController(IDriverService driverService, INotifier notifier)
+        public DriverController(IDriverService driverService, INotifier notifier, IMapper mapper)
         {
             _driverService = driverService;
             _notifier = notifier;
+            _mapper = mapper;
         }
 
         [HttpGet("{cpf}")]
-        [SwaggerResponse(StatusCodes.Status200OK, "Ok")]
+        [SwaggerResponse(StatusCodes.Status200OK, "Ok", type: typeof(DriverResponse))]
         [SwaggerResponse(StatusCodes.Status404NotFound, "NotFound")]
         [SwaggerOperation(Summary = "Get an Driver by Driver cpf", Description = "Request an Driver by it's Driver cpf.")]
         public async Task<IActionResult> GetDriverActiveByName([FromRoute] string cpf)
@@ -45,7 +49,7 @@ namespace Carguero.Registration.Poc.Api.Controllers.V1
         }
 
         [HttpGet("{cpf}/tenants")]
-        [SwaggerResponse(StatusCodes.Status200OK, "Ok")]
+        [SwaggerResponse(StatusCodes.Status200OK, "Ok", type: typeof(List<DriverResponse>))]
         [SwaggerOperation(Summary = "Get an Driver by Driver cpf and tenantId", Description = "Returns the driver with the Associate Tenants.")]
         public async Task<IActionResult> GetDriverActiveByTenant([FromQuery] string cpf, [FromQuery(Name = "tenant-id")] int tenantId)
         {
@@ -62,12 +66,10 @@ namespace Carguero.Registration.Poc.Api.Controllers.V1
         {
             try
             {
-                await _driverService.RegisterAsync(driverRequest);
+                await _driverService.RegisterAsync(_mapper.Map<Driver>(driverRequest));
 
                 if (_notifier.HasNotification())
-                {
                     return BadRequest(_notifier.GetNotifications());
-                }
 
                 return CreatedAtAction(default, default);
             }

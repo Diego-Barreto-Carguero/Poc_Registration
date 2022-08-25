@@ -1,5 +1,9 @@
-﻿using Carguero.Registration.Poc.Domain.Core.Entities;
+﻿// <copyright file="IBaseRepository.cs" company="Carguero">
+// Copyright (c) Carguero. All rights reserved.
+// </copyright>
+
 using System.Linq.Expressions;
+using Carguero.Registration.Poc.Domain.Core.Entities;
 
 namespace Carguero.Registration.Poc.Domain.Core.Contracts.Repositories
 {
